@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Profile</h1>
+    <p>This is your profile.</p>
+    <p><a href="{{ url_for('library') }}">Library</a> </p>
+    <p><a href="{{ url_for('gallery') }}">Gallery</a></p>
+    <p><a href="{{ url_for('profile_stats') }}">View Stats</a></p>
+
+</body>
+</html>
