@@ -5,24 +5,40 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: #2a021b;
-    color: #1f3d3e;
+    background-color: #000000;
+    color: #000000;
     line-height: 1.6;
     padding: 20px;
 }
 
 h1 {
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
+h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
 a {
-    color: #2980b9;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:hover {
-    color: #5a7f04;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -36,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: #3498db;
+    background-color: #2600fe;
 }
 
 nav ul {
@@ -50,5 +66,238 @@ nav ul li {
     display: inline;
 }
 
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
 
+
+.book-card {
+    position: relative;
+    width: 140px;
+    height: 240px;
+    margin: 20px;
+}
+
+.book-card.wide {
+    width: 100%;
+    height: 140px;
+}
+
+
+.book-card.wide .book-fg {
+    flex-direction: row;
+    align-items: center;
+}
+
+.book-card.wide .book-info {
+    text-align: right;
+}
+
+.book-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.profile-row {
+    display: flex;
+    gap: 40px;
+}
+
+.profile-row > .book-card-link {
+    flex: 1;
+}
+
+.book-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #01bfa6;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgb(0, 255, 255);
+    padding: 5px
+    
+}
+
+.book-fg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(149, 0, 255, 0.684);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+
+.book-fg:hover {
+    transform: translate(10px, -20px);  /* Moves slightly right and up */
+    background-color: #6a00ffbd;             /* Turns black on hover */
+    color: #000000;                        /* Text turns white for contrast */
+}
+
+
+
+.site-header {
+    position: sticky;      /* stays at top when scrolling */
+    top: 0;
+
+    width: 95%;
+    background-color: #000000; 
+    padding: 5px 35px;
+
+    box-shadow: 0 1px 10px rgb(0, 136, 255); /* same vibe as your cards */
+    z-index: 1000;         /* makes sure it stays above content */
+}
+
+/* Center content + nav */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav links styling */
+.site-header nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.site-header nav a:hover {
+    color: #00ddffd1;
+}
+
+.site-footer {
+    background-color: #000000;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 30px;
+    border-top: 1px solid #8400ffed;
+    box-shadow: 0 1px 10px rgb(0, 136, 255);
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.top-row {
+    display: flex;
+    gap: 20px;
+}
+
+
+.gallery-card, .stats-card {
+    flex: 1; 
+}
+
+
+.library-card {
+    width: 100%;
+}
+
+
+.wide-card {
+    background: #000000;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.wide-card:hover {
+    transform: translateY(-10px);
+    background-color: #000;
+    color: white;
+}
+
+
+.save-btn {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    padding: 6px 0;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.save-btn:hover {
+    background: #6a00ffbd;
+    color: #fff;
+}
+
+
+.remove-btn {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    padding: 6px 0;
+    background: #000000;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.remove-btn:hover {
+    background: #b30000;
+}
+
+.search-form {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.search-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #01bfa6;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #6a00ffbd;
+    color: #fff;
+}
 
